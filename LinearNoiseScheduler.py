@@ -20,4 +20,4 @@ class LinearNoiseScheduler:
             sqrt_alpha_cum_prod = sqrt_alpha_cum_prod.unsqueeze(-1)
             sqrt_one_minus_alpha_cum_prod = swqrt_one_minus_alpha_cum_prod.unsqueeze(-1)
 
-            return sqrt_alpha_cum_prod * original + sqrt_one_minus_alpha_cum_prod * noise
+        return sqrt_alpha_cum_prod * original + sqrt_one_minus_alpha_cum_prod * noise
