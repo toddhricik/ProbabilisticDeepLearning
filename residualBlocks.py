@@ -15,7 +15,7 @@ import torch.nn as nn
 
 # Here I follow the diagram of Ho et al. residual blocks in Figure 5 of the article referenced "1" at the top
 class residualBlock_PixelCNN(nn.Module):
-    def __init__(self, inputChannelCount=3, outputChannelCount=10):
+    def __init__(self, inputChannelCount, outputChannelCount):
         super(residualBlock_PixelCNN, self).__init__()
        
         # First make sure you received arguments for all params of __init__
@@ -26,7 +26,7 @@ class residualBlock_PixelCNN(nn.Module):
         # Process parameters given to this module
         self.inputChannelCount = inputChannelCount
         self.outputChannelCount = outputChannelCount
-
+    
         # Define some layers
         self.conv1 = nn.Conv2d(in_channels=256, out_channels=128, kernel_size=1, stride=1, padding='same', bias=True, groups=1)
         self.ReLU = nn.ReLU()
