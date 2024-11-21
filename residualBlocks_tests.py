@@ -26,8 +26,7 @@ class model(nn.Module):
     
 
 if __name__ == "__main__":
-    # Define some transformations
-    
+    # Define the transformations used by Ho et al. in their 2020 DPPM paper  
     transform = transforms.Compose([transforms.ToTensor()])#, transforms.Normalize((0.5, 0.5, 0.5), (0.4, 0.5,0.5))])
 
     # Download and load the CIFAR-10 training data
