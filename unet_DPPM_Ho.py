@@ -9,7 +9,7 @@ import torch.nn as nn
 import residualBlocks as rb
 
 class unet_DPPM_32(nn.Module):
-    def __init__(self, model_config):
+    def __init__(self):
         super().__init__()
         # According to Ho et al. DPPM paper, they use two residual blocks in each convolutional layer of the U-Net
         self.convLayer1 = nn.ModuleList(
@@ -26,6 +26,7 @@ class unet_DPPM_32(nn.Module):
                                  for i in range(2)])
      
     def forward(self, x, t):
+        outputChannelCount = 
         # Next they do a tensorflow 1.x tf.contrib.layers.group_norm(x) using 'norm1' as the layer name
         # Group norm statistics provide the averages of 32 groups of feature maps.
         x = self.groupNormalization(x)

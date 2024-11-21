@@ -1,5 +1,4 @@
 import residualBlocks as rb
-
 import torch
 from torch import nn
 from torchvision import datasets, transforms
