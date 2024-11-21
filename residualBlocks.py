@@ -14,9 +14,9 @@ import torch.nn as nn
 
 
 # Here I follow the diagram of Ho et al. residual blocks in Figure 5 of the article referenced "1" at the top
-class residualBlock_PixelCNN(nn.Module):
+class residualBlock_DPPM(nn.Module):
     def __init__(self, inputChannelCount, outputChannelCount):
-        super(residualBlock_PixelCNN, self).__init__()
+        super(residualBlock_DPPM, self).__init__()
        
         # First make sure you received arguments for all params of __init__
         if inputChannelCount==None or outputChannelCount==None:

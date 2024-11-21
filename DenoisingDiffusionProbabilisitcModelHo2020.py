@@ -8,7 +8,7 @@ class denoisingDiffusionProbabilisitcModelHo2020lCNN(nn.Module):
         self.conv1 = nn.Conv2d(in_channels=3, out_channels=256, kernel_size=3, stride=1, padding='same') 
         # Initialize a residual block
         self.resBlock = rb.residualBlock_PixelCNN(inputChannelCount=256, outputChannelCount=256)
-        
+        # After the resblocks come 
     def forward(self, x):
         # Step 1: The first layer is a 7x7 conv using Mask A
         # x = maskA()(x) or something like that
