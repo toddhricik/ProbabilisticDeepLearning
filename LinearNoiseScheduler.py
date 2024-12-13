@@ -18,7 +18,7 @@ class LinearNoiseScheduler:
 
         for _ in range(len(original_shape)-1):
             sqrt_alpha_cum_prod = sqrt_alpha_cum_prod.unsqueeze(-1)
-            sqrt_one_minus_alpha_cum_prod = swqrt_one_minus_alpha_cum_prod.unsqueeze(-1)
+            sqrt_one_minus_alpha_cum_prod = sqrt_one_minus_alpha_cum_prod.unsqueeze(-1)
 
         return sqrt_alpha_cum_prod * original + sqrt_one_minus_alpha_cum_prod * noise
 
